@@ -26,26 +26,21 @@
 				<key>3</key>
 				<dict>
 					<key>name</key>
-					<string>support.function.git-graph</string>
+					<string>constant.numeric.git-graph</string>
 				</dict>
 				<key>4</key>
 				<dict>
 					<key>name</key>
-					<string>constant.numeric.git-graph</string>
+					<string>support.function.git-graph</string>
 				</dict>
 				<key>5</key>
 				<dict>
 					<key>name</key>
 					<string>variable.parameter.git-graph</string>
 				</dict>
-				<key>6</key>
-				<dict>
-					<key>name</key>
-					<string>keyword.git-graph</string>
-				</dict>
 			</dict>
 			<key>match</key>
-			<string>^([| *\\]+)([0-9a-f]{4,40}) -( \(.*?\))? (.*) (\(.*) (&lt;.*&gt;) .*</string>
+			<string>^([| *\\]+)([0-9a-f]{7}) (\d{4}-\d{2}-\d{2}) (&lt;.*?&gt;)( \(.*?\))?</string>
 			<key>name</key>
 			<string>log-entry.git-graph</string>
 		</dict>
@@ -62,7 +57,7 @@
 			<key>comment</key>
 			<string>issue numbers</string>
 			<key>match</key>
-			<string>(?:[Ff]ix(?:e[ds])?|[Rr]esolve[ds]?|[Cc]lose[ds]?)?\s*(?:#\d+|\[.*?\])</string>
+			<string>(?:[Ff]ix(?:e[ds])?|[Rr]esolve[ds]?|[Cc]lose[ds]?)?\s*(?:#\d+|&lt;.*?&gt;)</string>
 			<key>name</key>
 			<string>keyword.git-graph</string>
 		</dict>
@@ -78,6 +73,25 @@
 			<key>match</key>
 			<string>Merge branch '(.*?)' of .*?
 ?$</string>
+			<key>name</key>
+			<string>comment.git-graph</string>
+		</dict>
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>keyword.git-graph</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>variable.parameter.git-graph</string>
+				</dict>
+			</dict>
+			<key>match</key>
+			<string>Merge pull request (.*?) from (.*)</string>
 			<key>name</key>
 			<string>comment.git-graph</string>
 		</dict>
